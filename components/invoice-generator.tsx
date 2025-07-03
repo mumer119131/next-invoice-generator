@@ -57,7 +57,7 @@ export default function InvoiceGenerator() {
   const [isPreview, setIsPreview] = useState(false)
   const printRef = useRef<HTMLDivElement>(null)
 
-  const updateInvoice = (field: keyof InvoiceData, value: any) => {
+  const updateInvoice = (field: keyof InvoiceData, value: string | number | InvoiceItem[]) => {
     setInvoice(prev => ({ ...prev, [field]: value }))
   }
 
@@ -106,18 +106,6 @@ export default function InvoiceGenerator() {
 
   const handlePrint = () => {
     window.print()
-  }
-
-  const handleDownload = () => {
-    const element = printRef.current
-    if (element) {
-      const printContents = element.innerHTML
-      const originalContents = document.body.innerHTML
-      document.body.innerHTML = printContents
-      window.print()
-      document.body.innerHTML = originalContents
-      window.location.reload()
-    }
   }
 
   if (isPreview) {
