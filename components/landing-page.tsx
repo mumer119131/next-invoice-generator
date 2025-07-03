@@ -50,7 +50,7 @@ export default function LandingPage() {
     {
       name: "Sarah Johnson",
       role: "Freelance Designer",
-      content: "This tool has saved me hours every week. Creating professional invoices is now effortless!",
+      content: "This tool has saved me hours every week. Creating professional invoices now effortless!",
       rating: 5
     },
     {
