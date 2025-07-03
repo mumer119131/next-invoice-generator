@@ -17,6 +17,7 @@ A beautiful, modern invoice generator built with Next.js, Tailwind CSS, and shad
 - 🌙 **Dark Mode** - Beautiful dark theme (default) with light mode option
 - 🚀 **No Registration** - Start creating invoices immediately
 - 💰 **Completely Free** - No hidden costs or limitations
+- 🔍 **SEO Optimized** - Server-side rendered landing page for better search visibility
 
 ## 🛠️ Tech Stack
 
@@ -64,6 +65,7 @@ A beautiful, modern invoice generator built with Next.js, Tailwind CSS, and shad
 - Step-by-step process explanation
 - Customer testimonials
 - Call-to-action sections
+- **Server-side rendered** for optimal SEO performance
 
 ### 🧾 Invoice Generator
 - Complete invoice form with all necessary fields
@@ -79,6 +81,7 @@ A beautiful, modern invoice generator built with Next.js, Tailwind CSS, and shad
 - Responsive design for all screen sizes
 - Print-optimized invoice layouts
 - Smooth animations and transitions
+- **Hybrid SSR/CSR architecture** for optimal performance
 
 ## 📁 Project Structure
 
@@ -86,13 +89,16 @@ A beautiful, modern invoice generator built with Next.js, Tailwind CSS, and shad
 ├── app/
 │   ├── globals.css          # Global styles and theme variables
 │   ├── layout.tsx           # Root layout with theme provider
-│   ├── page.tsx            # Landing page
+│   ├── page.tsx            # Landing page (SSR optimized)
 │   └── invoice/
 │       └── page.tsx        # Invoice generator page
 ├── components/
 │   ├── ui/                 # shadcn/ui components
 │   ├── invoice-generator.tsx # Main invoice generator
-│   ├── landing-page.tsx    # Landing page component
+│   ├── landing-page.tsx    # Landing page component (SSR)
+│   ├── landing-header.tsx  # Header component (client)
+│   ├── landing-hero.tsx    # Hero section (client)
+│   ├── landing-cta.tsx     # CTA section (client)
 │   ├── theme-provider.tsx  # Theme context provider
 │   └── theme-toggle.tsx    # Theme toggle button
 └── lib/
@@ -113,6 +119,31 @@ The app uses a beautiful color scheme that adapts to both light and dark modes:
 3. Use the existing design system and components
 4. Follow the TypeScript patterns established in the codebase
 
+## 🏗️ Architecture
+
+### Server-Side Rendering (SSR)
+The landing page is fully server-side rendered for optimal SEO performance:
+
+- **Static Content**: Most of the landing page content is rendered on the server
+- **Client Components**: Interactive elements (theme toggle, buttons) are hydrated on the client
+- **SEO Optimized**: Search engines can easily crawl and index the content
+- **Performance**: Faster initial page load and better Core Web Vitals
+
+### Component Architecture
+- **Hybrid Approach**: Combines SSR for content and CSR for interactivity
+- **Modular Design**: Separate client components for specific interactive features
+- **Theme Support**: Dark/light mode works seamlessly with SSR
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
 ## 🚀 Deployment
 
 ### Vercel (Recommended)
@@ -126,16 +157,6 @@ The app can be deployed on any platform that supports Next.js:
 - Railway
 - DigitalOcean App Platform
 - AWS Amplify
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## 📝 License
 

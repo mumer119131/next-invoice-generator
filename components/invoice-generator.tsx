@@ -86,10 +86,10 @@ const ModernTemplate: React.FC<TemplateProps> = ({ invoice, subtotal, taxAmount,
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead>Description</TableHead>
-            <TableHead className="text-center">Qty</TableHead>
-            <TableHead className="text-right">Rate</TableHead>
-            <TableHead className="text-right">Amount</TableHead>
+            <TableHead className="text-gray-900">Description</TableHead>
+            <TableHead className="text-center text-gray-900">Qty</TableHead>
+            <TableHead className="text-right text-gray-900">Rate</TableHead>
+            <TableHead className="text-right text-gray-900">Amount</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
